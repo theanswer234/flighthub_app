@@ -11,7 +11,7 @@
             <h1>Flight Search</h1>
         </div>
         <div id="searchFormWrap">
-            <form name="searchForm" id="searchForm" action="/flighthub/app/results.php">
+            <form name="searchForm" id="searchForm" action="app/results.php">
                 <table width="100%">
                 <tr>
                     <td>    
