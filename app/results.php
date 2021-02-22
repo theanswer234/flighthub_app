@@ -43,9 +43,9 @@ if(isset($_GET['dport']) && isset($_GET['aport'])){
             echo '</table>';
         }else{
             echo '<tr class="returnflight" ><td>'.$flights['returnflights'][$x]['airline'].'<br/>Flight '.$flights['returnflights'][$x]['number'].'</td>';
-            echo '<td>'.pretty_time($flights['adate'].' '.$flights['returnflights'][$x]['departure_time']).'</td>';
+            echo '<td>'.pretty_time($flights['rdate'].' '.$flights['returnflights'][$x]['departure_time']).'</td>';
             echo '<td>From : '.$flights['returnflights'][$x]['departure_airport'].'</td>';
-            echo '<td>'.time_shift($flights['returnflights'][$x]['departure_tz'], $flights['returnflights'][$x]['arrival_tz'], $flights['ddate'].' '.$flights['returnflights'][$x]['arrival_time']).'</td>';
+            echo '<td>'.time_shift($flights['returnflights'][$x]['departure_tz'], $flights['returnflights'][$x]['arrival_tz'], $flights['rdate'].' '.$flights['returnflights'][$x]['arrival_time']).'</td>';
             echo '<td>To : '.$flights['returnflights'][$x]['arrival_airport'].'</td><td>Price : '.$flights['returnflights'][$x]['price'].'$</td></tr>';
         }
     }

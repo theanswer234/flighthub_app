@@ -11,7 +11,7 @@
             <h1>Flight Search</h1>
         </div>
         <div id="searchFormWrap">
-            <form name="searchForm" id="searchForm" action="/app/results.php">
+            <form name="searchForm" id="searchForm" action="/flighthub/app/results.php">
                 <table width="100%">
                 <tr>
                     <td>    
@@ -54,22 +54,7 @@
                         <label for="return">Return date <input type="date" name="rdate"/></label>
                     </td>
                 </tr>
-                <tr>
-                    
-                    <td>    
-                        <label for="airline_filter">Filter results by selected airlines <input type="checkbox" id="airline_filter" name="airline_filter"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul class="airline_filter_list">
-                    <?php $airlines =  get_airlines();
-                    foreach($airlines as $single_airline){
-                        echo '<li><label for="'.$single_airline['code'].'">'.$single_airline['name'].'<input type="checkbox" name="airline_pref" value="'.$single_airline['code'].'"></label></li>';
-                    }?>
-                        </ul>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>     
                         <input type="submit" id="searchFormSubmit" value="Find Flights"/>
